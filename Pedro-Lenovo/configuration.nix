@@ -92,6 +92,7 @@
     pkgs.github-desktop
     pkgs.spotify
     pkgs.conda
+    pkgs.discord
   ];
 
 
