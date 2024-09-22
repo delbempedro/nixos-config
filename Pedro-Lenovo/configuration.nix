@@ -88,7 +88,7 @@
     #  wget
     pkgs.kdePackages.kate
     #  pkgs.thunderbird
-    pkgs.vscodium
+    pkgs.vscode
     pkgs.github-desktop
     pkgs.spotify
     pkgs.conda
