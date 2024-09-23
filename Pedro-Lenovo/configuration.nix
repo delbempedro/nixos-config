@@ -107,7 +107,6 @@
     pkgs.python3
     pkgs.julia
     pkgs.fortran-language-server
-    pkgs.ipynb
     # Minecraft install
     (pkgs.prismlauncher.overrideAttrs(oldAttrs: rec {
       src = pkgs.fetchFromGitHub {
