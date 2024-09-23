@@ -62,6 +62,15 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # Enable bluetooth
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+  hardware.bluetooth.settings = {
+	  General = {
+	  	Experimental = true;
+  	};
+  };
+
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -93,8 +102,21 @@
     pkgs.spotify
     pkgs.conda
     pkgs.discord
+    pkgs.whatsapp-for-linux
+    pkgs.brave
+    pkgs.python3
+    pkgs.julia
+    pkgs.fortran-language-server
+    pkgs.ipynb
+    # Minecraft install
+    (pkgs.prismlauncher.overrideAttrs(oldAttrs: rec {
+      src = pkgs.fetchFromGitHub {
+      owner = "Diegiwg";
+      repo = "PrismLauncher-Cracked";
+      rev = "99aeed1f092d5dd3df1f48174f1b4a1df3f6ecac";
+      hash = "sha256-rqDnaXz9hUDugIzHVG+5xbBPOTm8FAWFyPIDOmNgQ0Q=";
+      };}))
   ];
-
 
 
   # Install firefox.
