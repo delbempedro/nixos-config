@@ -50,6 +50,9 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
+  # Enable Waydoird
+  virtualisation.waydroid.enable = true;
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "br";
@@ -107,6 +110,8 @@
     pkgs.python3
     pkgs.julia
     pkgs.fortran-language-server
+    pkgs.texlive
+
     # Minecraft install
     (pkgs.prismlauncher.overrideAttrs(oldAttrs: rec {
       src = pkgs.fetchFromGitHub {
@@ -128,6 +133,74 @@
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
+
+    # Run normal binaries
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = (with pkgs; [
+    libva # fuck alvr, they removed the appimages
+    ocamlPackages.alsa
+    alsa-lib
+    xfce.libxfce4windowing
+    xfce.xfwm4
+    alsa-lib
+    at-spi2-atk
+    at-spi2-core
+    atk
+    brotli
+    cairo
+    cudatoolkit
+    cups
+    curl
+    dbus
+    expat
+    fontconfig
+    freetype
+    fuse3
+    ffmpeg
+    gdk-pixbuf
+    glib
+    gtk3
+    icu
+    libGL
+    libappindicator-gtk3
+    libdrm
+    libglvnd
+    libnotify
+    libpulseaudio
+    libunwind
+    libusb1
+    libuuid
+    libxkbcommon
+    libxml2
+    libvdpau
+    mesa
+    nspr
+    nss
+    openssl
+    pango
+    pipewire
+    pulseaudio
+    systemd
+    vulkan-loader
+    wayland
+    x264
+    xorg.libX11
+    xorg.libXScrnSaver
+    xorg.libXcomposite
+    xorg.libXcursor
+    xorg.libXdamage
+    xorg.libXext
+    xorg.libXfixes
+    xorg.libXi
+    xorg.libXrandr
+    xorg.libXrender
+    xorg.libXtst
+    xorg.libxcb
+    xorg.libxkbfile
+    xorg.libxshmfence
+    zlib
+    libplist
+  ]);
 
   # Zsh
   environment.shells = [ pkgs.zsh ];
