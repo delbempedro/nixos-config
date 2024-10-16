@@ -93,6 +93,9 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  # Enable screen broadcasts
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = [
@@ -110,7 +113,7 @@
     pkgs.python3
     pkgs.julia
     pkgs.fortran-language-server
-    pkgs.texlive
+    pkgs.texliveFull
 
     # Minecraft install
     (pkgs.prismlauncher.overrideAttrs(oldAttrs: rec {
