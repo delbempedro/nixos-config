@@ -114,6 +114,7 @@
     pkgs.julia
     pkgs.fortran-language-server
     pkgs.texliveFull
+    pkgs.adobe-reader
 
     # Minecraft install
     (pkgs.prismlauncher.overrideAttrs(oldAttrs: rec {
