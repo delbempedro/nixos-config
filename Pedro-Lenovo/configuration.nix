@@ -114,6 +114,9 @@
     pkgs.julia
     pkgs.fortran-language-server
     pkgs.texliveFull
+    pkgs.pandoc
+    pkgs.yt-dlp
+    pkgs.ffmpeg-full
 
     # Minecraft install
     (pkgs.prismlauncher.overrideAttrs(oldAttrs: rec {
