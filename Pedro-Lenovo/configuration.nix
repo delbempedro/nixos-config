@@ -117,6 +117,7 @@
     pkgs.pandoc
     pkgs.yt-dlp
     pkgs.ffmpeg-full
+    pkgs.mangal
 
     # Minecraft install
     (pkgs.prismlauncher.overrideAttrs(oldAttrs: rec {
