@@ -118,6 +118,9 @@
     pkgs.yt-dlp
     pkgs.ffmpeg-full
     pkgs.mangal
+    pkgs.ruby
+    pkgs.calibre
+
 
     # Minecraft install
     (pkgs.prismlauncher.overrideAttrs(oldAttrs: rec {
