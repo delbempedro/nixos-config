@@ -75,7 +75,7 @@
   };
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -120,6 +120,8 @@
     pkgs.mangal
     pkgs.ruby
     pkgs.calibre
+    # pkgs.bisq-desktop # Broken, bisq2 existe
+    pkgs.multimarkdown
 
 
     # Minecraft install
@@ -158,7 +160,6 @@
     atk
     brotli
     cairo
-    cudatoolkit
     cups
     curl
     dbus
@@ -244,6 +245,7 @@
     gc = {
       automatic = lib.mkDefault true;
       dates = lib.mkDefault "weekly";
+      options = "-d --delete-older-than 30d";
     };
     settings = {
       trusted-users = ["root" "@wheel"];
