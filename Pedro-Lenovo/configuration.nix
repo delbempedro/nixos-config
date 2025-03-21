@@ -121,6 +121,7 @@
     pkgs.ruby
     pkgs.calibre
     pkgs.gfortran14
+    pkgs.openconnect
     # pkgs.bisq-desktop # Broken, bisq2 existe
     pkgs.multimarkdown
 
