@@ -122,9 +122,10 @@
     pkgs.calibre
     pkgs.gfortran14
     pkgs.openconnect
-    # pkgs.bisq-desktop # Broken, bisq2 existe
+    pkgs.bisq2
     pkgs.multimarkdown
-
+    pkgs.floorp
+    pkgs.libinput
 
     # Minecraft install
     (pkgs.prismlauncher.overrideAttrs(oldAttrs: rec {
