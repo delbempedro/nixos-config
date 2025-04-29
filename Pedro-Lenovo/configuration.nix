@@ -96,6 +96,9 @@
   # Enable screen broadcasts
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
+  # shell
+  programs.direnv.enable = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = [
@@ -126,6 +129,8 @@
     pkgs.multimarkdown
     pkgs.floorp
     pkgs.libinput
+    pkgs.lollypop
+    pkgs.spotifyd
 
     # Minecraft install
     (pkgs.prismlauncher.overrideAttrs(oldAttrs: rec {
