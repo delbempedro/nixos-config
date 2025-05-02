@@ -131,6 +131,7 @@
     pkgs.libinput
     pkgs.lollypop
     pkgs.spotifyd
+    pkgs.vscodium
 
     # Minecraft install
     (pkgs.prismlauncher.overrideAttrs(oldAttrs: rec {
