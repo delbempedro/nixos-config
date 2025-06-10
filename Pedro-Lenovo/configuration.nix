@@ -50,6 +50,9 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
+  # Enable cron
+  services.cron.enable = true;
+
   # Enable Waydoird
   virtualisation.waydroid.enable = true;
 
@@ -132,6 +135,8 @@
     pkgs.lollypop
     pkgs.spotifyd
     pkgs.vscodium
+    pkgs.cron
+    pkgs.imagemagick
 
     # Minecraft install
     (pkgs.prismlauncher.overrideAttrs(oldAttrs: rec {
