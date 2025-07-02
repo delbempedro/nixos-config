@@ -137,6 +137,7 @@
     pkgs.vscodium
     pkgs.cron
     pkgs.imagemagick
+    pkgs.rclone
 
     # Minecraft install
     (pkgs.prismlauncher.overrideAttrs(oldAttrs: rec {
