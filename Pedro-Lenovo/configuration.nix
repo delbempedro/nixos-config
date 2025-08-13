@@ -138,6 +138,7 @@
     pkgs.cron
     pkgs.imagemagick
     pkgs.rclone
+    pkgs.texlive.combined.scheme-full
 
     # Minecraft install
     (pkgs.prismlauncher.overrideAttrs(oldAttrs: rec {
